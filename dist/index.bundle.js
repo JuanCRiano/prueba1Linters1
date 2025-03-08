@@ -1,18 +1,2 @@
-(self["webpackChunkproyecto1linters1"] = self["webpackChunkproyecto1linters1"] || []).push([["index"],{
-
-/***/ "./src/main.js":
-/*!*********************!*\
-  !*** ./src/main.js ***!
-  \*********************/
-/***/ (() => {
-
-throw new Error("Module parse failed: 'import' and 'export' may appear only with 'sourceType: module' (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> import setupFormHandler from './js/modules/formHandler.js';\n| \n| document.addEventListener('DOMContentLoaded', () => {");
-
-/***/ })
-
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__("./src/main.js"));
-/******/ }
-]);
+"use strict";(self.webpackChunksurvey_form_sena_azure_main=self.webpackChunksurvey_form_sena_azure_main||[]).push([[57],{496:()=>{document.addEventListener("DOMContentLoaded",(function(){var e,t;e=document.getElementById("survey-form"),t=document.getElementById("message-container"),e.addEventListener("submit",(function(n){n.preventDefault();var o=document.getElementById("name").value,u=document.getElementById("email").value,m=document.getElementById("number").value,c=document.getElementById("dropdown").value,d=document.querySelectorAll('input[name="choice"]:checked'),r=document.querySelectorAll('input[type="checkbox"]:checked'),l=document.getElementById("comments").value;o&&u&&m&&c&&d&&r.length>0&&l?(t.textContent="FORMULARIO ENVIADO CON EXITO",t.style.color="green",e.reset()):(t.textContent="Por favor, complete todos los campos requeridos.",t.style.color="red")}))}))}},e=>{e(e.s=496)}]);
+//# sourceMappingURL=index.bundle.js.map
