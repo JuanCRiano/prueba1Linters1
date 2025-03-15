@@ -1,7 +1,7 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
+export default {
   mode: 'production',
   entry: {
     index: './src/main.js',
@@ -15,7 +15,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve('./dist'), // Ajuste del uso de `path`
     clean: true,
   },
   module: {
@@ -38,11 +38,13 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
-            sourceType: 'module',
           },
         },
       },
     ],
+  },
+  resolve: {
+    extensions: ['.js'],
   },
   optimization: {
     runtimeChunk: 'single',

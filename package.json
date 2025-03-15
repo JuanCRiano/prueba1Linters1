@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^10.0.0",
@@ -527,7 +528,7 @@
     "type": "git",
     "url": "git+https://github.com/JuanCRiano/RepositorioPrueba.git"
   },
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/JuanCRiano/RepositorioPrueba/issues"
   },
