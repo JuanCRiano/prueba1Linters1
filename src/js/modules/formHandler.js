@@ -1,4 +1,4 @@
-export default function setupFormHandler() {
+export default function setupformHandler() {
   const form = document.getElementById('survey-form');
   const messageContainer = document.getElementById('message-container');
 
