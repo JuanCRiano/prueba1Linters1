@@ -1,21 +1,22 @@
-import express from 'express'; // Importación de Express
-import path from 'path'; // Importación de Path
-import { fileURLToPath } from 'url'; // Módulo necesario para manejar __dirname en ES6
+/* eslint-disable no-underscore-dangle, no-console */
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 
-// Simular __dirname en ES6
+// Simula __dirname en ES6
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// Para cualquier solicitud que no coincida con un archivo estático, servir index.html
+// Para solicitudes que no coincidan con archivos estáticos, servir index.html
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-// Exponer puerto
+// Puerto del servidor
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
