@@ -1,94 +1,91 @@
-<a name="readme-top"></a>
+# Formulario SENA - Proyecto con Linters y Despliegue en Azure
 
-<div align="center">
+Este proyecto es una aplicación web que implementa un formulario interactivo, desarrollado como parte del currículo de Redes SysAdmin del SENA. Incluye configuraciones de linters, un flujo de trabajo de CI/CD para despliegue en Azure, y un servidor Express para servir la aplicación.
 
-<img src="/src/img/8379454.png" alt="logo" width="140" height="auto" style="border-radius:50%" />
-<br/>
-<h3><b>NETWORK SCRIPT PROJECT</b></h3>
+## Tabla de Contenidos
 
-</div>
+- [Descripción](#descripción)
+- [Características](#características)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Requisitos Previos](#requisitos-previos)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Pruebas](#pruebas)
+- [Despliegue](#despliegue)
+- [Autores](#autores)
+- [Contribuciones](#contribuciones)
+- [Licencia](#licencia)
 
-# ✅ TABLE OF CONTENTS
+## Descripción
 
-- [📖 About the Project](#about-project)
-  - [⚒️ Build With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run Tests](#run-tests)
-  - [Deployment](#deployment)
-- [👥 Authors](#authors)
-- [🕹️ Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐ Show your Support](#support)
-- [👏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📃 License](#license)
+El proyecto incluye un formulario web que permite a los usuarios ingresar datos personales y preferencias. La aplicación está construida con HTML, CSS y JavaScript, y utiliza herramientas modernas como Webpack, Babel y linters para garantizar la calidad del código.
 
-# 📖 NETWORK SCRIPT PROJECT <a name="about-project"></a>
+## Características
 
-**[Network Script Project]** Este es un primer proyecto en el currículo de Redes SysAdmin de SENA.
+- **Formulario interactivo**: Validación de campos y mensajes dinámicos.
+- **Configuración de linters**: ESLint, Stylelint y Webhint para mantener la calidad del código.
+- **Flujo de trabajo CI/CD**: Automatización del despliegue en Azure mediante GitHub Actions.
+- **Servidor Express**: Para servir la aplicación en producción.
+- **Optimización con Webpack**: Empaquetado y optimización de recursos.
 
-## ⚒️ Build With <a name="built-with"></a>
+## Estructura del Proyecto
+.babelrc .eslintrc.json .gitignore .hintrc .stylelintrc.json eslint.config.mjs package.json README.md server.js webpack.config.js .github/ workflows/ .github/workflows/azure-deploy.yml .github/workflows/linters.yml src/ src/index.html src/main.js assets/ src/assets/styles.css img/ 8379454.png Tetraedro.jpg js/ modules/ src/js/modules/formHandler.js
 
-Este proyecto fue creado utilizando:
 
-- **HTML**
-- **Markdown**
-- **ShellScript**
-- **Git**
-- **GitHub**
+## Requisitos Previos
 
-### Tech Stack <a name="tech-stack"></a>
-
-- HTML
-- Markdown
-- ShellScript
+- Node.js (versión 18 o superior)
+- npm
 - Git
-- GitHub
 
-<details>
-<summary>Client</summary>
-<ul>
-<li><a href="https://developer.mozilla.org/es/docs/Web/HTML">HTML</a></li>
-</ul>
-</details>
+## Instalación
 
-<details>
-<summary>Markdown</summary>
-<ul>
-<li><a href="https://markdown.es/sintaxis-markdown/">Markdown</a></li>
-</ul>
-</details>
+1. Clona el repositorio:
 
-### Key Features <a name="key-features"></a>
+   ```sh
+   git clone https://github.com/JuanCRiano/RepositorioPrueba.git
+   cd RepositorioPrueba
+   
+2. Instala las dependencias
 
-- Gestión de scripts de red.
-- Ejecución automatizada.
+   npm install
 
-<p align="right"><a href="#readme-top">Back to top</a></p>
 
-## 💻 Getting Started <a name="getting-started"></a>
+3. Construye el proyecto e inicia el servidor local
 
-Para obtener una copia local del proyecto y ejecutarlo, sigue estos pasos:
+   npm run build
+   npm start
 
-### Prerequisites <a name="prerequisites"></a>
+## Pruebas
+Este proyecto incluye configuraciones para linters. Ejecuta los siguientes comandos para verificar la calidad del código:
 
-Necesitarás las siguientes herramientas:
+1. ESLint:
+  npx eslint .
 
-- [VS Code](https://code.visualstudio.com/)
-- [Git](https://git-scm.com/) y [GitHub](https://github.com/)
-- ShellScript
+2. Stylelint:
+  npx stylelint "**/*.{css,scss}"
 
-### Setup <a name="setup"></a>
+3. Webhint:
+  npx hint .
 
-Clona este repositorio en tu carpeta deseada:
+## Despliegue
 
-```sh
-cd prueba1Linters1
-git clone https://github.com/JuanCRiano/prueba1Linters1.git
+El proyecto incluye un flujo de trabajo de GitHub Actions para desplegar en una máquina virtual de Azure. Asegúrate de configurar los secretos necesarios en tu repositorio:
+
+1. VM_IP
+2. VM_USERNAME
+3. VM_PRIVATE_KEY
+4. VM_PORT (opcional)
+
+El flujo de trabajo se ejecuta automáticamente al hacer push en la rama develop.
+
+## Autores
+
+Juan C. Riaño
+GitHub
+
+## Contribuciones
+Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull request para sugerir mejoras.
+
+## Licencia
+Este proyecto está bajo la licencia ISC. ```
